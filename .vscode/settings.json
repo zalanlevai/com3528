@@ -1,0 +1,8 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/student/pkgs/mdk-210921/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/student/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/student/mdk/share/python"
+    ]
+}
