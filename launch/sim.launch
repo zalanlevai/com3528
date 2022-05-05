@@ -14,7 +14,7 @@
     />
 
     <!-- Specify which .world file to load -->
-    <arg name="world" default="$(find team08)/sim/worlds/maze.world"/>
+    <arg name="world" default="$(find team08)/sim/worlds/maze2.world"/>
 
     <!-- Set the name for Gazebo -->
     <arg name="gazebo_ns" default="gazebo_server" doc="Gazebo namespace, typically 'gazebo' or 'gazebo_server'"/>
