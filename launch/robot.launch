@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+    <group ns="/miro/sensors/stereo">
+        <remap from="left/image_raw" to="/miro/sensors/caml"/>
+        <remap from="right/image_raw" to="/miro/sensors/camr"/>
+
+        <node
+            name="stereo_camera_info"
+            pkg="team08"
+            type="stereo_camera_info.py"
+            output="screen"
+        />
+
+        <node
+            name="stereo_image_proc"
+            pkg="stereo_image_proc"
+            type="stereo_image_proc"
+            output="screen"
+        >
+            <param name="approximate_sync" value="True"/>
+            <param name="queue_size" value="100"/>
+        </node>
+    </group>
+</launch>
