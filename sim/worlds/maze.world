@@ -120,8 +120,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -165,8 +165,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -210,8 +210,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -255,8 +255,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -300,8 +300,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>0.509804 0.478431 0.490196 1</ambient>
           </material>
@@ -345,8 +345,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -390,8 +390,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -435,8 +435,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -480,8 +480,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -525,8 +525,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -570,8 +570,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -615,8 +615,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -660,8 +660,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -705,8 +705,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -750,8 +750,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -795,8 +795,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>0.509804 0.478431 0.490196 1</ambient>
           </material>
@@ -840,8 +840,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -885,8 +885,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -930,8 +930,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -975,8 +975,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -1020,8 +1020,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -1065,8 +1065,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -1110,8 +1110,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -1155,8 +1155,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>1 1 1 1</ambient>
           </material>
@@ -1200,8 +1200,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>0.509804 0.478431 0.490196 1</ambient>
           </material>
@@ -1245,8 +1245,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>file://materials/scripts/seamless_wood.material</uri>
+              <name>Team08/SeamlessWood</name>
             </script>
             <ambient>0.509804 0.478431 0.490196 1</ambient>
           </material>
