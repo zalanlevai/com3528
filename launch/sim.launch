@@ -6,7 +6,7 @@
     />
     <env
         name="GAZEBO_RESOURCE_PATH"
-        value="$(optenv MIRO_DIR_MDK)/sim:$(optenv GAZEBO_RESOURCE_PATH)"
+        value="$(find team08)/sim/media:$(optenv MIRO_DIR_MDK)/sim:$(optenv GAZEBO_RESOURCE_PATH)"
     />
     <env
         name="GAZEBO_PLUGIN_PATH"
