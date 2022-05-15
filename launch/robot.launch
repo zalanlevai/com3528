@@ -28,4 +28,18 @@
             output="screen"
         />
     </group>
+
+    <group ns="/miro/maze">
+        <remap from="ctrl_vel" to="/miro/control/cmd_vel"/>
+        <remap from="ctrl_joints" to="/miro/control/kinematic_joints"/>
+
+        <remap from="sonar" to="/miro/sensors/sonar"/>
+
+        <node
+            name="control"
+            pkg="team08"
+            type="control.py"
+            output="screen"
+        />
+    </group>
 </launch>
