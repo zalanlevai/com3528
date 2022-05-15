@@ -20,5 +20,12 @@
             <param name="approximate_sync" value="True"/>
             <param name="queue_size" value="100"/>
         </node>
+
+        <node
+            name="stereo_camera_depth"
+            pkg="team08"
+            type="stereo_camera_depth.py"
+            output="screen"
+        />
     </group>
 </launch>
