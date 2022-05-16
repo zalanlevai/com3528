@@ -12,7 +12,12 @@ from sensor_msgs.msg import CompressedImage  # ROS CompressedImage message
 from sensor_msgs.msg import JointState  # ROS joints state message
 from cv_bridge import CvBridge, CvBridgeError  # ROS -> OpenCV converter
 from geometry_msgs.msg import TwistStamped  # ROS cmd_vel (velocity control) message
+import miro2 as miro  # Import MiRo Developer Kit library
 
+try:  # For convenience, import this util separately
+    from miro2.lib import wheel_speed2cmd_vel  # Python 3
+except ImportError:
+    from miro2.utils import wheel_speed2cmd_vel  # Python 2
 
 class MiRoClient:
      
@@ -20,6 +25,29 @@ class MiRoClient:
     Script settings below
     """
     TICK = 0.02  # This is the update interval for the main control loop in secs
+    FAST = 0.4  # Linear speed when kicking a zone is not in sight
+    ROT_SPEED = 0.8 # Linear speed when kicking a zone is in sight
+    MOVE = False
+
+    def drive(self, speed_l=0.1, speed_r=0.1):  # (m/sec, m/sec)
+        """
+        Wrapper to simplify driving MiRo by converting wheel speeds to cmd_vel
+        """
+        # Prepare an empty velocity command message
+        msg_cmd_vel = TwistStamped()
+
+        # Desired wheel speed (m/sec)
+        wheel_speed = [speed_l, speed_r]
+
+        # Convert wheel speed to command velocity (m/sec, Rad/sec)
+        (dr, dtheta) = wheel_speed2cmd_vel(wheel_speed)
+
+        # Update the message with the desired speed
+        msg_cmd_vel.twist.linear.x = dr
+        msg_cmd_vel.twist.angular.z = dtheta
+
+        # Publish message to control/cmd_vel topic
+        self.vel_pub.publish(msg_cmd_vel)
 
     def callback_caml(self, ros_image):  # Left camera
         self.callback_cam(ros_image, 0)
@@ -51,8 +79,7 @@ class MiRoClient:
 
     def detect_colour(self, frame, index):
         """
-        Image processing operations, fine-tuned to detect a small,
-        toy blue ball in a given frame.
+        Image processing operations, tuned to detect three coloured zones.
         """
         if frame is None:  # Sanity check
             return
@@ -108,16 +135,20 @@ class MiRoClient:
         green_mask = cv2.inRange(im_hsv, (45,100,20), (65,150,204))
         blue_mask = cv2.inRange(im_hsv, (10,100,20), (25,150,204))
 
+        is_zone = False
         # Check if a given colour is present
         if cv2.countNonZero(blue_mask) > 0:
             print('blue is present!')
+            is_zone = True
 
         if cv2.countNonZero(green_mask) > 0:
             print('green is present!')
+            is_zone = False
 
         if cv2.countNonZero(orange_mask) > 0:
             print('orange is present!')
-
+            is_zone = True
+        return is_zone
 
     def __init__(self):
         # Initialise a new ROS node to communicate with MiRo
@@ -143,6 +174,14 @@ class MiRoClient:
             queue_size=1,
             tcp_nodelay=True,
         )
+        # Create a new publisher to send velocity commands to the robot
+        self.vel_pub = rospy.Publisher(
+            topic_base_name + "/control/cmd_vel", TwistStamped, queue_size=0
+        )
+        # Create a new publisher to move the robot head
+        self.pub_kin = rospy.Publisher(
+            topic_base_name + "/control/kinematic_joints", JointState, queue_size=0
+        )
         # Create handle to store images
         self.input_camera = [None, None]
         # New frame notification
@@ -154,20 +193,39 @@ class MiRoClient:
         # Bookmark
         self.bookmark = 0
 
+
     def loop(self):
         """
         Main control loop
         """
         print("loop starts")
+        wait = 0
         while not rospy.core.is_shutdown():
-
+            #self.drive(self.FAST, self.FAST)
             for index in range(2):  # For each camera (0 = left, 1 = right)
                 # Skip if there's no new image, in case the network is choking
                 if not self.new_frame[index]:
                     continue
                 image = self.input_camera[index]
-                # Run the detect ball procedure
-                self.detect_colour(image, index)
+                # Runs the colour detection
+                should_rotate = self.detect_colour(image, index)
+
+                #if MOVE is set to true, showcases a simple avoidant behaviour
+                if self.MOVE:
+                    if should_rotate: 
+                        print("please rotate")
+                        if wait % 2 == 0:
+                            self.drive(self.ROT_SPEED,-self.ROT_SPEED)
+                            wait = 0
+                        else:
+                            self.drive(-self.ROT_SPEED,self.ROT_SPEED)
+                            wait = 0
+                    else:
+                        print("please wait")
+                        wait = wait + 1
+                    if wait > 1:    
+                        self.drive(self.FAST, self.FAST)
+                        print("please drive")
 
             # Yield
             rospy.sleep(self.TICK)
@@ -177,3 +235,4 @@ class MiRoClient:
 if __name__ == "__main__":
     main = MiRoClient()  # Instantiate class
     main.loop()  # Run the main control loop
+  
