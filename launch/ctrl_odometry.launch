@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <node
+        name="ctrl_odometry"
+        pkg="team08"
+        type="ctrl_odometry.py"
+        output="screen"
+    />
+</launch>

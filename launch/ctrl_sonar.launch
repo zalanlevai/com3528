@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <group ns="/miro/maze">
+        <remap from="ctrl_vel" to="/miro/control/cmd_vel"/>
+        <remap from="ctrl_joints" to="/miro/control/kinematic_joints"/>
+
+        <remap from="sonar" to="/miro/sensors/sonar"/>
+
+        <node
+            name="ctrl_sonar"
+            pkg="team08"
+            type="ctrl_sonar.py"
+            output="screen"
+        />
+    </group>
+</launch>

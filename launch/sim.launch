@@ -27,8 +27,6 @@
         args="--physics ode --verbose $(arg world)"
     />
 
-    <node name="test" pkg="team08" type="test.py"/>
-
     <!-- Start Gazebo client -->
     <node name="gazebo_gui"
         pkg="gazebo_ros"
